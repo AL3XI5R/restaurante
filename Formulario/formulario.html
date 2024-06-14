@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">   
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+</head>
+<body>
+
+<!-- ----------BOTONES EXTERIORES---------- -->
+    <div class="botonesExteriores">
+        <button class="botonExteriorRegistro botonExterior" onclick="desplazarContenedor(contenedorRegistro), desaparecerBoton(this)">REGISTRATE</button>
+        <button class="botonExteriorInicio botonExterior" onclick="desplazarContenedor(contenedorInicio), desaparecerBoton(this)">INICIA SESION</button>
+    </div>
+
+
+<!-- ---------CONTENEDOR PARA REGISTRARSE--------- -->
+    <div class="contenedorRegistro contenedorPrincipal">
+        <div class="barraDesplazamiento" onclick="desplazarContenedor(contenedorRegistro)"></div>
+        <h1 class="titulo">REGISTRATE</h1>
+        <form class="formularioRegistro formulario">
+            <div class="contenedorEntrada" id="nombre">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="mensajeError errorNombre">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Solo puedes incluir letras y espacios entre 4 a 20 carácteres</p>
+            </div>
+            <!-- -------------------------------------------------- -->
+            <div class="contenedorEntrada" id="correo">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" name="correo" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div class="mensajeError errorCorreo">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>El correo solo puede contener letras, numeros, puntos, guiones y arroba</p>
+            </div>
+            <!-- -------------------------------------------------- -->
+            <div class="contenedorContraseña" id="contraseña">
+                <div class="entradaContraseña">
+                    <i class="fi fi-rr-lock"></i>
+                    <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                    <i class="fa-regular fa-eye icono_contraseña" onclick="visibilidadContraseña('contraseña', this) "></i>
+                </div>
+                <div class="mensajeError errorContraseña">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Necesitas al menos 8 carácteres</p>
+                </div>
+            </div>
+            <!-- -------------------------------------------------- -->
+            <div class="contenedorContraseña" id="confirmacion">
+                <div class="entradaContraseña">
+                    <i class="fi fi-rr-padlock-check"></i>
+                    <input type="password" name="confirmacion" placeholder="Confirma tu contraseña" required>
+                    <i class="fa-regular fa-eye icono_contraseña" onclick="visibilidadContraseña('confirmacion', this) "></i>
+                </div>
+                <div class="mensajeError errorConfirmacion">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>No coinciden las contraseñas</p>
+                </div>
+            </div>
+            <!-- -------------------------------------------------- -->
+            <button type="submit" class="boton">Crear Cuenta</button>
+            <div class="mensajeError errorEnvio">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Completa el formulario correctamente</p>
+            </div>
+            <div class="mensajeCorrecto ">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>¡Bienvenido a la familia!</p>
+            </div>
+        </form>
+        <div class="logosInferiores">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+    </div>
+
+    <!-- ---------CONTENEDOR PARA INICIAR SESION--------- -->
+
+    <div class="contenedorInicio contenedorPrincipal">
+        <div class="barraDesplazamiento barraInicio" onclick="desplazarContenedor(contenedorInicio)"></div>
+        <h1 class="titulo tituloInicio">INICIA SESION</h1>
+        <form class="formularioInicio formulario">
+            <!-- -------------------------------------------------- -->
+            <div class="contenedorEntrada  contenedorEntradasInicio" id="correo">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" name="correo" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <!-- -------------------------------------------------- -->
+            <div class="contenedorContraseña " id="contraseña">
+                <div class="entradaContraseña contenedorEntradasInicio">
+                    <i class="fi fi-rr-lock"></i>
+                    <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                    <i class="fa-regular fa-eye icono_contraseña" onclick="visibilidadContraseña('contraseña', this) "></i>
+                </div>
+
+            </div>
+            <!-- -------------------------------------------------- -->
+            <button type="submit" class="boton botonInicio">Crear Cuenta</button>
+            <div class="mensajeError errorEnvio">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Completa el formulario correctamente</p>
+            </div>
+            <div class="mensajeCorrecto ">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>¡Bienvenido a la familia!</p>
+            </div>
+        </form>
+        <div class="logosInferiores logosInicio">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+    </div>
+    <script src="formulario.js"></script>
+</body>
+</html>
