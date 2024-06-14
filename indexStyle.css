@@ -1,0 +1,1111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+main{
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', sans-serif;
+    background: #4d443d;    
+    overflow-x: hidden;
+}
+
+header{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    /* padding: 0px 10% 0px 0px; */
+    min-height: 70px;
+    transition: background-color 0.4s;
+    z-index: 45;
+}
+
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+a:visited {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
+
+
+
+.scrollHeader{
+    background: #4d443d;
+}
+
+
+section{
+    overflow: visible;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.logo img{
+    width: auto;
+    height: 50px;
+}
+
+.links{
+    display: flex;
+    transition: background-color 0.5s ease;
+    z-index: 30;
+    
+}
+
+.links li{
+    list-style: none;
+    margin: 0px 10px;
+    font-size: 20px;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+    font-size: 20px;
+    position: relative;
+}
+
+
+.links a:before{
+    content: attr(data-contenido-link);    
+    position: absolute;
+    color: #A68F70;
+    top:0;
+    left:0;
+    width:0%;
+    overflow:hidden;
+    transition:all 0.5s;
+    font-size: 20px;
+    
+  }
+  .links a:hover:before{
+    width:100%;
+    
+  }
+
+.hamburguesa{
+    display: none;
+    font-size: 25px;
+}
+
+.lineaDivision{
+    position: absolute;
+    left: 7vw;
+    width: 80%;
+    height: 1px;
+    top: 70px;
+    background-color: black;
+    opacity: 0;
+    z-index: 50;
+}
+
+.intro{
+    height: 100vh;
+    margin: 0;
+}
+
+
+.videoFondo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlayVideo{
+    background: rgba(45, 43, 42, 0.45);
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.introTexto{
+    position: absolute;
+    left: 0;
+    color: white;
+    z-index: 20;
+    top: 45vh;
+    width: 100%;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Kanit", sans-serif;
+    line-height: 40px;
+    cursor: default;
+}
+
+.introTexto p{
+    margin: 20px 0 10px 0;
+    padding: 0;
+
+}
+
+.introTexto button{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border:none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "Kanit", sans-serif;
+    position: relative;
+    transition: all 0.6s;
+}
+
+
+.introTexto button:hover{
+    color: #e2cfb8;
+}
+
+
+
+.contenido{
+    height: 100%;
+    background: url(../media/chalkboard.jpg);
+    background-attachment: fixed;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.fondoClaro{
+    background: url(../media/texture.jpg);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    top: 100vh;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.contenedor{
+    height: 80vh;
+    overflow-x: hidden;
+}
+
+
+.contenedorTextos{
+    display: flex;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0 auto;
+    top: 30%;
+    color: #4D443D;
+    font-weight: 800;
+    width: 80%;
+    z-index: 40;
+}
+
+.contenedorTextos h2{
+    font-size: 50px;
+    margin: 0;
+    line-height: 40px;
+    letter-spacing: 1px;
+    max-width: 360px;
+}
+
+.contenedorTextos p{
+    font-size: 18px;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    max-width: 360px;
+}
+
+.contenedorTextos button{
+    background: transparent;
+    color: #4D443D;
+    border:none;
+    /* padding: 10px 20px; */
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: "Comfortaa", sans-serif;
+    border: 2px solid #4D443D;
+    margin-top: 45px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.contenedorTextos button:before{
+    content: "VER MENÚ";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    font-size: 20px;
+    background: #4D443D;
+    color: white;
+    place-items: center;
+    transition: all 1s;
+}
+
+.contenedorTextos button:hover:before{
+    left: 0;
+}
+
+
+
+
+
+.ilustracionNegra{
+    background: url(../media/muffin_black_chalk.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 75%;
+    left: -40px;
+    width: 200px;
+    height: 150px;
+    z-index: 20;
+}
+
+.primerPlato{
+    position: absolute;
+    z-index: 30;
+    width: 55%;
+    height: 100vh;
+    top: 96vh;
+    right: 0vw;
+    overflow: hidden;
+}
+
+.primerPlato img{
+    background: url(../media/plato_1.png);
+    transform: rotate(-85deg);  
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+    
+}
+
+
+
+
+
+
+.mesaOscura{
+    background: url(../media/dark_table.jpg);
+    background-size: cover;
+    width: calc(100% - 25vw);
+    height: 75vh;
+    position: absolute;
+    top: 185vh;
+    left: 25vw;
+    z-index: 30;
+    overflow-x: hidden;
+}
+
+.contenedorMesaOscura{
+    height: 90vh;
+    overflow: hidden;
+}
+
+.textosMesaOscura{
+    position: relative;
+    text-align: center;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0 auto;
+    color: white;
+    top: 35vh;
+    font-weight: 800;
+    width: 80%;
+    z-index: 40;
+}
+
+
+.textosMesaOscura h2{
+    font-size: 50px;
+    margin: 0;
+    line-height: 40px;
+}
+
+.textosMesaOscura p{
+    font-size: 17px;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+}
+
+.textosMesaOscura button{
+    color: white;
+    border: 2px solid white;
+    background: transparent;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+  .textosMesaOscura button:before{
+    content: "REGISTRARSE";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    background: white  ;
+    color: #4D443D;
+    place-items: center;
+    transition: all 1s;
+}
+
+.textosMesaOscura button:hover:before{
+    left: 0;
+}
+
+
+
+
+.ilustracionBlanca{
+    background: url(../media/muffin_chalk.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -80%;
+    left: -100px;
+    width: 200px;
+    height: 150px;
+    z-index: 25 !important;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.fondoClaroSegundo{
+    background: url(../media/texture.jpg);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    top: 270vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contenedorClaroSegundo{
+    height: 80vh;
+    overflow-x: hidden;
+}
+
+.textosClaroSegundo{
+    position: relative;
+    text-align: center;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0 auto;
+    top: 25%;
+    color: #4D443D;
+    font-weight: 800;
+    width: 80%;
+    z-index: 20;
+}
+
+.textosClaroSegundo h2{
+    position: relative;
+    font-size: 50px;
+    margin: 0;
+    line-height: 40px;
+    z-index: 25;
+}
+
+.textosClaroSegundo p{
+    font-size: 18px;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+}
+
+.textosClaroSegundo button{
+    background: transparent;
+    color: #4D443D;
+    border:none;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: "Comfortaa", sans-serif;
+    border: 2px solid #4D443D;
+    margin-top: 45px;
+    padding: 7px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.textosClaroSegundo button:before{
+    content: "VER PÁGINA";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    font-size: 18px;
+    background: #4D443D;
+    color: white;
+    place-items: center;
+    transition: all 1s;
+}
+
+.textosClaroSegundo button:hover:before{
+    left: 0;
+}
+
+
+
+.ilustracionNegraSegunda{
+    background: url(../media/icecream_black_chalk.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -45%;
+    right: -80px;
+    width: 200px;
+    height: 150px;
+    z-index: 22;
+}
+
+.segundoPlato{
+    position: absolute;
+    z-index: 1;
+    width: 45%;
+    height: 100vh;
+    top: 280vh;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+.segundoPlato img{
+    background: url(./media/plato_2.png);
+    transform: rotate(95deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+}
+
+
+
+
+
+.contenedorContexto{
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.textosContexto{
+    position: relative;
+    text-align: center;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0 auto;
+    top: 25%;
+    color: white;
+    font-weight: 800;
+    width: 80%;
+    z-index: 20;
+}
+
+.textosContexto h2{
+    font-size: 50px;
+    margin: 0;
+    line-height: 50px;
+}
+
+.textosContexto p{
+    font-size: 17px;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+}
+
+.ilustracionBlancaSegunda{
+    background: url(../media/coffee_chalk.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 95%;
+    right: -100px;
+    width: 200px;
+    height: 150px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+@media screen and (min-width: 560px) {
+    .fondoClaro{
+        height: 80vh;
+        width: 75vw;
+        min-width: 472px;
+        top: 95vh;
+        z-index: 20;
+        box-shadow: 0 5px 150px #000;
+        overflow: visible;
+
+    }
+
+    .contenedorTextos{
+        display: flex;
+        align-items: start;
+        text-align: start;
+        overflow: visible;
+        top: 30%;
+        left: 0vw;
+        padding: 0 0 0 12%;
+        width: 75vw;
+        margin: 0;
+    }
+
+    .contenedorTextos h2{
+        width: 100%;
+        font-size: 55px;
+        line-height: 30px;
+        letter-spacing: -5px;
+    }
+
+    .contenedorTextos p{
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .contenedorTextos button{
+        align-self: flex-start;
+        font-size: 18px;
+        letter-spacing: -2px;
+        height: 50px;
+        width: 150px;
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+
+
+
+    .ilustracionNegra{
+        width: 15vw;
+        min-width: 110px;
+        height: 30vh;
+        top: 50%;
+        left: 25vw;
+        z-index: 1;
+    }    
+
+    .primerPlato{
+        width: 47.9%;
+        height: 550px;
+        top: 87vh;
+        left: 51vw;
+    }
+
+    .primerPlato img{
+        width: 350px;
+        height: 250px;
+    }
+
+    .contenedorMesaOscura{
+        position: relative;
+    }
+
+    .textosMesaOscura{
+        left: 7px;
+        text-align: start;
+        position: relative;
+    }
+
+    .textosMesaOscura h2{
+        width: 600px;
+        font-size: 55px;
+        line-height: 30px;
+        letter-spacing: -5px;
+        position: relative;
+    }
+
+    .textosMesaOscura p{
+        width: 500px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .textosMesaOscura button{
+        font-size: 15px;
+        letter-spacing: 0px;
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .ilustracionBlanca{
+        width: 160px;
+        height: 170px;
+        top: -120%;
+        left: -14vw;
+        overflow: visible;
+    }
+
+
+    .fondoClaroSegundo{
+        width: 75vw;
+        min-width: 472px;
+        top: 285vh;
+        z-index: 20;
+        box-shadow: 0 5px 150px #000;
+        overflow: visible;
+    }
+
+    .textosClaroSegundo{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        overflow: visible;
+        top: 45%;
+        left: 0vw;
+        padding: 0 0 0 12%;
+        width: 75vw;
+        margin: 0;
+    }
+
+    .textosClaroSegundo h2{
+        width: 100%;
+        font-size: 55px;
+        line-height: 42px;
+        letter-spacing: -5px;
+    }
+
+    .textosClaroSegundo p{
+        width: 70%;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .textosClaroSegundo button{
+        font-size: 18px;
+        letter-spacing: 0px;
+        height: 50px;
+        width: 150px;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .ilustracionNegraSegunda{
+        width: 20vw;
+        min-width: 110px;
+        height: 180px;
+        top: -70%;
+        right: 0vw;
+    }
+
+    .segundoPlato{
+        width: 320px;
+        height: 300px;
+        top: 365vh;
+        left: -12vw;
+        z-index: 30;
+    }
+
+    .segundoPlato img{
+        width: 300px;
+        height: 290px;
+    }
+
+
+    .contenedorContexto{
+        position: relative;
+        top: 18vh;
+    }
+
+    .textosContexto{
+        top: 30%;
+        text-align: start;
+        left: 10vw;
+        overflow: visible;
+    }
+
+    .textosContexto h2{
+        font-size: 55px;
+        line-height: 60px;
+        letter-spacing: -4px;
+    }
+
+    .textosContexto p{
+        width: 75%;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .ilustracionBlancaSegunda{
+        width: 25vw;
+        min-width: 110px;
+        height: 300px;
+        top: -100%;
+        right: 0vw;
+    }
+}
+
+
+/* Ajustar el tamaño de la fuente de acuerdo al tamaño de la pantalla */
+@media screen and (max-width: 835px){
+    .logo{
+        font-size: 20px;
+    }
+
+    .links li{
+        font-size: 15px;
+    }
+
+    .links a{
+        font-size: 15px;
+    }
+
+    .links a:before{
+        font-size: 15px !important;
+    }
+    
+}
+
+/* Hacer aparecer el menú hamburguesa y desaparecer los links */
+@media screen and (max-width: 695px){
+
+    .links{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        height: 270px;
+        left: 0;
+        top: 54px;
+        gap: 35px;
+        padding: 55px 0px 5px 0px;
+        background: #4d443d;
+        opacity: 0;
+        overflow-x: hidden;
+
+    }
+    
+    
+
+    .active:not(.lineaDivision){
+        transition: opacity 0.5s ease;
+        opacity: 1;
+        background: #4d443d;
+    }
+
+    .lineaDivision.active{
+        opacity: 1;
+    }
+
+
+    .hamburguesa{
+        display: block;
+    }
+    
+}
+
+
+
+/* TAMAÑO DE ESCRITORIO */
+
+@media screen and (min-width: 1050px) {
+    .introTexto{
+        font-size: 45px;
+        line-height: 40px;
+        font-weight: 500;
+    }
+
+    .introTexto button{
+        font-size: 20px;
+    }
+
+    .contenedor{
+        overflow: visible;
+    }
+
+    .fondoClaro{
+        height: 80vh;
+        width: 75vw;
+        top: 95vh;
+        z-index: 20;
+        box-shadow: 0 5px 150px #000;
+        overflow: visible;
+    }
+
+    .contenedorTextos{
+        display: flex;
+        align-items: start;
+        text-align: start;
+        overflow: visible;
+        top: 20%;
+        left: 0vw;
+        padding: 0 0 0 12%;
+        width: 75vw;
+        margin: 0;
+    }
+
+    .contenedorTextos h2{
+        font-size: 80px;
+        line-height: 60px;
+        letter-spacing: -7px;
+    }
+
+    .contenedorTextos p{
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .contenedorTextos button{
+        font-size: 18px;
+        letter-spacing: -2px;
+        height: 50px;
+        width: 150px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .contenedorTextos button:before{
+        font-size: 18px;
+    }
+
+    .ilustracionNegra{
+        width: 20vw;
+        min-width: 200px;
+        height: 35vh;
+        top: 50%;
+        left: 21vw;
+    }
+
+    .primerPlato{
+        width: 492px;
+        height: 550px;
+        top: 87vh;
+        right: 0vw;
+    }
+
+    .primerPlato img{
+        width: 600px;
+        height: 420px;
+    }
+
+    .mesaOscura{
+        box-shadow: 0 5px 150px #000;
+        top: 192vh;
+    }
+
+    .contenedorMesaOscura{
+        position: relative;
+    }
+
+    .textosMesaOscuraScroll{
+        position: absolute;
+    }
+
+    .textosMesaOscura{
+        left: 80px;
+        text-align: start;
+        position: relative;
+    }
+
+    .textosMesaOscura h2{
+        width: 600px;
+        font-size: 70px;
+        line-height: 80px;
+        letter-spacing: -7px;
+        position: relative;
+    }
+
+    .textosMesaOscura p{
+        width: 500px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .textosMesaOscura button{
+        font-size: 15px;
+        letter-spacing: 0px;
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .ilustracionBlanca{
+        width: 450px;
+        height: 250px;
+        top: -50%;
+        left: -32vw;
+        overflow: visible;
+    }
+
+    .contenedorClaroSegundo{
+        position: relative;
+        top: 15vh;
+        overflow: visible;
+    }
+
+    .fondoClaroSegundo{
+        width: 75vw;
+        top: 285vh;
+        z-index: 20;
+        box-shadow: 0 5px 150px #000;
+        overflow: visible;
+    }
+
+    .textosClaroSegundo{
+        top: 30%;
+        text-align: start;
+        left: 10vw;
+        overflow: visible;
+        padding: 0;
+        margin: 0 3vw;
+    }
+
+    .textosClaroSegundo h2{
+        font-size: 70px;
+        line-height: 35px;
+        letter-spacing: -7px;
+    }
+
+    .textosClaroSegundo p{
+        width: 600px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .textosClaroSegundo button{
+        font-size: 18px;
+        letter-spacing: 0px;
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ilustracionNegraSegunda{
+        width: 300px;
+        height: 180px;
+        top: 70%;
+        left: 6vw;
+        z-index: 999;
+    }
+
+    .segundoPlato{
+        width: 770px;
+        height: 550px;
+        top: -20vh;
+        left: 35vw;
+        z-index: 30;
+    }
+
+    .segundoPlato img{
+        width: 460px;
+        height: 450px;
+    }
+
+    .contenedorContexto{
+        position: relative;
+        top: 15vh;
+    }
+
+    .textosContexto{
+        top: 30%;
+        text-align: start;
+        left: 10vw;
+    }
+
+    .textosContexto h2{
+        font-size: 75px;
+        line-height: 60px;
+        letter-spacing: -7px;
+    }
+
+    .textosContexto p{
+        width: 50vw;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .ilustracionBlancaSegunda{
+        width: 500px;
+        height: 300px;
+        top: -100%;
+        right: -10vw;
+    }
+
+}
+
+
+
