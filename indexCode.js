@@ -1,17 +1,73 @@
-
 const hamburguesa = document.querySelector(".fa-bars");
 const links = document.querySelector(".links");
 const lineaDivision = document.querySelector(".lineaDivision");
-const header = document.querySelector("header");
+/* const header = document.querySelector("header"); */
 const movimientoCelular = 0.02;
 const movimientoTablet = 0.01;
 const movimientoEscritorio = 0.05
 let tamañoPantalla = window.innerWidth;
 const textoAMover = document.querySelector(".textosMesaOscuraScroll");
 const linksHeader = document.querySelectorAll(".links a");
+const barraCarga = document.querySelector(".rellenoCarga");
+const pantallaCarga = document.querySelector(".pantallaCarga")
+const contenidoPagina = document.querySelector(".contenidoCompleto")
+let progreso = 10;
+const body = document.querySelector("body")
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  
+  function multimediaCargada() {
+    ilustraciones = document.querySelectorAll(".multimedia")
+    video = document.querySelector(".videoFondo")
+
+    ilustraciones.forEach(ilustracion => {
+      if (!ilustracion.complete) {
+        return false
+      }
+    })
+    if (video.readyState !== 4) {
+      return false
+    }
+    return true;
+  }
+
+  function cambiarProgresoCarga() {
+    barraCarga.classList.add("bg-slate-50")
+    if (progreso < 85) {
+      console.log(progreso)
+      progreso += 1;
+      barraCarga.style.width = `${progreso}%`
+      barraCarga.textContent = `${Math.floor(progreso)}%`;
+      setTimeout(cambiarProgresoCarga, 100);
+    } else if (multimediaCargada()) {
+      barraCarga.classList.add("duration-700")
+      progreso = 100;
+      barraCarga.style.width = `${progreso}%`
+      barraCarga.textContent = `${progreso}%`;
+      setTimeout(() => {
+        pantallaCarga.classList.add("duration-700")
+        pantallaCarga.style.filter = "brightness(0)"
+        setTimeout(() => {
+          pantallaCarga.classList.add("hidden");
+          contenidoPagina.classList.remove("hidden");
+          setTimeout(() => {
+            contenidoPagina.style.filter = "brightness(1)";
+            body.removeChild(pantallaCarga)
+            setTimeout(() => {
+              contenidoPagina.removeAttribute("style", "")
+              contenidoPagina.classList.remove("brightness-0")
+            }, 200);
+          }, 0);
+        }, 1000);
+      }, 500);
+    } else {
+      setTimeout(cambiarProgresoCarga, 100);
+    }
+  }
+  cambiarProgresoCarga()
+
   linksHeader.forEach(link => {
     link.setAttribute("data-contenido-link", link.textContent)});
 })
@@ -32,6 +88,10 @@ function actualizarTamañoPantalla() {
 window.addEventListener("resize", actualizarTamañoPantalla)
 
 
+
+
+const header = document.querySelector("header");
+
 window.addEventListener("scroll", () =>{
     scrollActual = window.scrollY;
     if (scrollActual > 1) {
@@ -40,6 +100,17 @@ window.addEventListener("scroll", () =>{
         header.classList.remove("scrollHeader")
     }
 })
+
+
+
+
+
+
+
+
+
+
+
 
 hamburguesa.addEventListener("click", () => {
     console.log("click")

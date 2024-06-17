@@ -15,93 +15,171 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-    <header>
-        <div class="logo">
-            <img src="./media/logo.png" alt="">
-            <p>NOUVEAU</p>
+<body class="">
+    <div class="pantallaCarga relative flex flex-col items-center justify-center w-screen h-screen px-20 overflow-hidden">
+        <div class="fondoCarga -z-50 absolute w-screen h-screen"></div>
+        <div class="logoCarga shrink absolute top-0 z-20 flex items-center justify-center w-screen">
+            <img src="./media/logo.png" class="w-20" alt="logo de Nouveau">
+            <p class="text-3xl text-white font-[Kanit]">NOUVEAU</p>
         </div>
-        <div class="lineaDivision"></div>
-        <nav class="nav">
-            <ul class="links">
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">MENÚ</a></li>
-                <li><a href="./Formulario/formulario.html" target="_blank">REGISTRO</a></li>
-                <li><a href="">BENTO</a></li>
-        </nav>
-        <div class="hamburguesa">
-            <i class="fas fa-bars"></i>
-        </div>
-    </header>
+        <div class="ilustracionCarga sm:-left-20 md:w-96 md:h-60 md:top-[66vh] md:left-[-5vw]"></div>
+        <div class="segundaIlustracionCarga sm:-right-20 md:w-96 md:h-60"></div>
 
-
-
-    <main>
-        <div class="intro">
-            <video src="./media/video_intro.mp4" autoplay loop muted class="videoFondo"></video>
-            <div class="overlayVideo"></div>
-            <div class="introTexto">
-                <p>NO COMAS MENOS.<br>COME MEJOR.</p>
-                <button>VER MENÚ</button>
+        <div class="infoCarga flex flex-col items-center">
+            <h2 class="text-6xl md:text-7xl 2xl:text-8xl font-medium font-[Kanit] text-white ">CARGANDO</h2>
+            <p class="text-opacity-70 text-lg text-center text-white">¡La página estará lista antes de que pase tu antojo!</p>
+            <div class="barraCarga w-full mt-10  rounded-lg backdrop-blur-sm shadow-[0px_0px_20px_-5px] shadow-white">
+                <div class="rellenoCarga flex items-center justify-center w-[10%] bg-slate-50 rounded-lg text-black transition-[width] duration-75">10%</div>
             </div>
         </div>
-        <div class="contenido">
-            <section>
-                <div class="fondoClaro"></div>
-                <div class="contenedor">
-                    <div class="contenedorTextos">
-                        <h2>MENÚ NOUVEAU</h2>
-                        <p>SABEMOS QUE EL ANTOJO TE ESTÁ GANANDO, NO TE RESISTAS</p>
-                        <button>VER MENÚ</button>
-                        <div class="ilustracionNegra"></div>
-                    </div>
-                    <div class="primerPlato moverScrollInverso"><img src="./media/plato_1.png" alt="Imagen de un plato lujoso hecho por Nouveau"></div>
+    </div>
+
+    <div class="contenidoCompleto brightness-0 relative hidden overflow-x-hidden duration-1000">  
+        <header >
+            <div class="logo">
+                <img src="./media/logo.png" alt="" class="multimedia">
+                <p>NOUVEAU</p>
+            </div>
+            <div class="lineaDivision"></div>
+            <nav class="nav">
+                <ul class="links">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">MENÚ</a></li>
+                    <li><a href="./Formulario/formulario.html" target="_blank">REGISTRO</a></li>
+                    <li><a href="">BENTO</a></li>
+            </nav>
+            <div class="hamburguesa">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="intro">
+                <video src="./media/video_intro.mp4" autoplay loop muted class="videoFondo"></video>
+                <div class="overlayVideo"></div>
+                <div class="introTexto">
+                    <p>NO COMAS MENOS.<br>COME MEJOR.</p>
+                    <button>VER MENÚ</button>
                 </div>
-            </section>
-            <section>
-                <div class="mesaOscura"></div>
-                <div class="contenedorMesaOscura">
-                    <div class="textosMesaOscura">
-                        <div class="textosMesaOscuraScroll moverScrollInverso">
-                            <h2 class="textoParaScroll">ÚNETE A LA FAMILIA</h2>
-                            <p class="textoParaScroll">REGISTRATE PARA CONSEGUIR TODOS LOS BENEFICIOS Y DISFRUTAR DE LA MEJOR FORMA CON NOUVEAU</p>
-                            <button class="textoParaScroll"><a href="./Formulario/formulario.html">REGISTRARSE</a></button>
+            </div>
+            <div class="contenido multimedia">
+                <section>
+                    <div class="fondoClaro multimedia"></div>
+                    <div class="contenedor">
+                        <div class="contenedorTextos">
+                            <h2>MENÚ NOUVEAU</h2>
+                            <p>SABEMOS QUE EL ANTOJO TE ESTÁ GANANDO, NO TE RESISTAS</p>
+                            <button>VER MENÚ</button>
+                            <div class="ilustracionNegra multimedia"></div>
                         </div>
-                        <div class="ilustracionBlanca moverScroll"></div>
+                        <div class="primerPlato moverScrollInverso "><img src="./media/plato_1.png" class="multimedia" alt="Imagen de un plato lujoso hecho por Nouveau"></div>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div class="fondoClaroSegundo"></div>
-                <div class="contenedorClaroSegundo">
-                    <div class="textosClaroSegundo">
-                        <h2>ANTIGUA PÁGINA</h2>
-                        <p>OBSERVA LOS INICIOS DE NOUVEAU EN LA COLORIDA Y EXTRAVAGENTE PÁGINA ANTERIOR</p>
-                        <button>VER PÁGINA</button>
-                        <div class="ilustracionNegraSegunda"></div>
+                </section>
+                <section>
+                    <div class="mesaOscura multimedia"></div>
+                    <div class="contenedorMesaOscura">
+                        <div class="textosMesaOscura">
+                            <div class="textosMesaOscuraScroll moverScrollInverso">
+                                <h2 class="textoParaScroll">ÚNETE A LA FAMILIA</h2>
+                                <p class="textoParaScroll">REGISTRATE PARA CONSEGUIR TODOS LOS BENEFICIOS Y DISFRUTAR DE LA MEJOR FORMA CON NOUVEAU</p>
+                                <button class="textoParaScroll"><a href="./Formulario/formulario.html">REGISTRARSE</a></button>
+                            </div>
+                            <div class="ilustracionBlanca moverScroll multimedia"></div>
+                        </div>
                     </div>
-                    <div class="segundoPlato moverScrollInverso">
-                        <img src="./media/plato_2.png" alt="Foto de un plato lujoso creado por Nouveau" class="moverScrollInverso">
+                </section>
+                <section>
+                    <div class="fondoClaroSegundo multimedia"></div>
+                    <div class="contenedorClaroSegundo">
+                        <div class="textosClaroSegundo">
+                            <h2>ANTIGUA PÁGINA</h2>
+                            <p>OBSERVA LOS INICIOS DE NOUVEAU EN LA COLORIDA Y EXTRAVAGENTE PÁGINA ANTERIOR</p>
+                            <button>VER PÁGINA</button>
+                            <div class="ilustracionNegraSegunda multimedia"></div>
+                        </div>
+                        <div class="segundoPlato moverScrollInverso">
+                            <img src="./media/plato_2.png" alt="Foto de un plato lujoso creado por Nouveau" class="moverScrollInverso multimedia">
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div class="contenedorContexto">
-                    <div class="textosContexto">
-                        <h2>SOBRE LA PÁGINA</h2>
-                        <p>PÁGINA CREADA PARA PRACTICAR DISEÑO Y DESARROLLO WEB INSPIRADA EN GREENREBEL.CA USANDO ALGUNAS DE SUS ILUSTRACIONES Y MEDIOS AUDIOVISUALES, ABSOLUTAMENTE TODO EL CRÉDITO DE ESTA PÁGINA PARA ELLOS</p>
-                        <div class="ilustracionBlancaSegunda moverScroll"></div>
+                </section>
+                <section>
+                    <div class="contenedorContexto">
+                        <div class="textosContexto">
+                            <h2>SOBRE LA PÁGINA</h2>
+                            <p>PÁGINA CREADA PARA PRACTICAR DISEÑO Y DESARROLLO WEB INSPIRADA EN GREENREBEL.CA USANDO ALGUNAS DE SUS ILUSTRACIONES Y MEDIOS AUDIOVISUALES, ABSOLUTAMENTE TODO EL CRÉDITO DE ESTA PÁGINA PARA ELLOS</p>
+                            <div class="ilustracionBlancaSegunda moverScroll multimedia"></div>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
+                </section>
+            </div>
+        </main>
+    
+        <footer class="flex flex-col items-center">
+            <div class="logoFooter flex items-center mt-5">
+                <img src="./media/logo.png" class="multimedia w-20">
+            </div>
 
-    <footer>
+            <div class="infoFooter w-3/4 mt-10">
+                <svg class="w-10 h-10 mx-auto mb-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                </svg>
+                <blockquote class="grid place-items-center">
+                    <p class="dark:text-white text-2xl italic font-medium text-center text-gray-900 max-w-[700px] ">" Una vez que entras a ese restaurante, te condenas a no gustar jamás de otro "</p>
+                </blockquote>
+                <figcaption class="rtl:space-x-reverse flex items-center justify-center mt-2 space-x-3">
+                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                    <div class="rtl:divide-x-reverse flex items-center divide-x-2 divide-white">
+                        <cite class="pe-3 dark:text-white font-medium text-gray-900">Michael Gough</cite>
+                        <cite class="ps-3 dark:text-gray-400 text-sm text-gray-500">Chef Michelin</cite>
+                    </div>
+                </figcaption>
+            </div>
 
-    </footer> 
+
+            <div class="redesSociales h-60 sm:h-40 place-items-center lg:mt-8 grid w-screen mt-16">
+                <ul class="sm:grid-cols-4 grid grid-cols-2">
+                    <li>
+                      <a class="facebook" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="twitter" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="instagram" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="google" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <i class="fa-brands fa-google-plus" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+        </footer> 
+    </div>
 
 
 

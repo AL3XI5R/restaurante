@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +20,45 @@ body{
     overflow-x: hidden;
 }
 
+
+.fondoCarga{
+    background-image: url(./media/chalkboard.jpg);
+}
+
+.ilustracionCarga{
+    background: url(./media/coffee_chalk.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 80vh;
+    left: -20vw;
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.segundaIlustracionCarga{
+    background: url(./media/muffin_chalk.png);
+    rotate: -20deg;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8vh;
+    right: -20vw;
+    width: 250px;
+    height: 160px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
 header{
     box-sizing: border-box;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100vw;
@@ -32,7 +69,7 @@ header{
     /* padding: 0px 10% 0px 0px; */
     min-height: 70px;
     transition: background-color 0.4s;
-    z-index: 45;
+    z-index: 50;
 }
 
 
@@ -98,8 +135,6 @@ section{
     content: attr(data-contenido-link);    
     position: absolute;
     color: #A68F70;
-    top:0;
-    left:0;
     width:0%;
     overflow:hidden;
     transition:all 0.5s;
@@ -138,7 +173,7 @@ section{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     z-index: 1;
 }
@@ -147,7 +182,7 @@ section{
     background: rgba(45, 43, 42, 0.45);
     z-index: 10;
     position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     top: 0;
 }
@@ -308,9 +343,10 @@ section{
     position: absolute;
     z-index: 30;
     width: 55%;
-    height: 100vh;
-    top: 96vh;
-    right: 0vw;
+    width: auto;
+    height: 90vh;
+    top: 92vh;
+    right: -30vw;
     overflow: hidden;
 }
 
@@ -320,7 +356,7 @@ section{
     background-position: left center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 500px;
+    width: 400px;
     
 }
 
@@ -413,7 +449,7 @@ section{
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -60%;
+    top: -80%;
     left: -100px;
     width: 200px;
     height: 150px;
@@ -468,6 +504,7 @@ section{
     padding: 0;
     font-family: "Kanit", sans-serif;
     font-weight: 400;
+    line-height: 20px;
 }
 
 .textosClaroSegundo button{
@@ -528,7 +565,7 @@ section{
     z-index: 1;
     width: 45%;
     height: 100vh;
-    top: 280vh;
+    top: 270vh;
     left: 0;
     overflow: hidden;
     transform: rotate(180deg);
@@ -590,6 +627,163 @@ section{
     z-index: 1;
     overflow: hidden;
 }
+
+
+
+.redesSociales ul {
+    width: 100vw;
+    margin:0;
+    padding:0;
+    display: grid;
+    place-items: center;
+    max-width: 450px;
+  }
+  
+  .redesSociales ul li {
+    list-style:none;
+  }
+  
+  .redesSociales ul li a {
+    display:block;
+    position:relative;
+    width:100px;
+    height:100px;
+    line-height:100px;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color: white;
+    margin: 0 15px;
+    transition:.5s;
+  }
+  
+  .redesSociales ul li a span {
+    position:absolute;
+    transition: transform .5s;
+  }
+  
+  .redesSociales ul li a span:nth-child(1),
+  .redesSociales ul li a span:nth-child(3){
+    width:80%;
+    height:3px;
+    background:white;
+  }
+  
+  .redesSociales ul li a span:nth-child(1) {
+    top:10%;
+    left:10%;
+    transform-origin: right;
+  }
+  
+  .redesSociales ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+  }
+  
+  .redesSociales ul li a span:nth-child(3) {
+    bottom:10%;
+    left:10%;
+    transform-origin: left;
+  }
+  
+  .redesSociales ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+  }
+  
+  .redesSociales ul li a span:nth-child(2),
+  .redesSociales ul li a span:nth-child(4){
+    width:3px;
+    height:80%;
+    background:#404040;
+  }
+  
+  .redesSociales ul li a span:nth-child(2) {
+    top:10%;
+    left:10%;
+    transform:scale(0);
+    transform-origin: bottom;
+  }
+  
+  .redesSociales ul li a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+    transition:transform .5s;
+  }
+  
+  .redesSociales ul li a span:nth-child(4) {
+    top:10%;
+    right:10%;
+    transform:scale(0);
+    transform-origin: top;
+  }
+  
+  .redesSociales ul li a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:transform .5s;
+  }
+  
+  .redesSociales .facebook:hover {
+    color: #3b5998;
+  }
+  
+  .redesSociales .facebook:hover span { 
+    background: #3b5998;
+  }
+  
+  .redesSociales .twitter:hover {
+    color: #1da1f2;
+  }
+  
+  .redesSociales .twitter:hover span { 
+    background: #1da1f2;
+  }
+  
+  .redesSociales .instagram:hover {
+    color: #c32aa3;
+  }
+  
+  .redesSociales .instagram:hover span { 
+    background: #c32aa3;
+  }
+  
+  .redesSociales .google:hover {
+    color: #dd4b39;
+  }
+  
+  .redesSociales .google:hover span { 
+    background: #dd4b39;
+  }
+  
+  .redesSociales ul li a .twitter {
+    color: #1da1f2;
+  }
+  
+  .redesSociales ul li a:hover:nth-child(3) {
+    color: #c32aa3;
+  }
+  
+  .redesSociales ul li a:hover:nth-child(4) {
+    color: #dd4b39;
+  }
+
+  .facebook i, .twitter i, .instagram i, .google i{
+    height: 100%;
+  }
+  
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -656,15 +850,15 @@ section{
     }    
 
     .primerPlato{
-        width: 47.9%;
-        height: 550px;
+        width: 75%;
+        height: auto;
         top: 87vh;
         left: 51vw;
     }
 
     .primerPlato img{
-        width: 350px;
-        height: 250px;
+        width: 650px;
+        height: auto;
     }
 
     .contenedorMesaOscura{
@@ -679,7 +873,7 @@ section{
 
     .textosMesaOscura h2{
         width: 600px;
-        font-size: 55px;
+        font-size: 52px;
         line-height: 30px;
         letter-spacing: -5px;
         position: relative;
@@ -687,7 +881,7 @@ section{
 
     .textosMesaOscura p{
         width: 500px;
-        font-size: 20px;
+        font-size: 19px;
         letter-spacing: 0px;
     }
 
@@ -741,8 +935,9 @@ section{
 
     .textosClaroSegundo p{
         width: 70%;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: 0px;
+        line-height: 20px;
     }
 
     .textosClaroSegundo button{
@@ -760,34 +955,40 @@ section{
         width: 20vw;
         min-width: 110px;
         height: 180px;
-        top: -70%;
+        top: -30%;
         right: 0vw;
     }
 
     .segundoPlato{
         width: 320px;
         height: 300px;
-        top: 365vh;
+        top: 345vh;
         left: -12vw;
         z-index: 30;
     }
 
     .segundoPlato img{
-        width: 300px;
-        height: 290px;
+        width: 240px;
+        height: auto;
     }
 
 
     .contenedorContexto{
         position: relative;
-        top: 18vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        top: 9vh;
     }
 
     .textosContexto{
         top: 30%;
-        text-align: start;
-        left: 10vw;
+        text-align: center;
         overflow: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .textosContexto h2{
@@ -797,7 +998,7 @@ section{
     }
 
     .textosContexto p{
-        width: 75%;
+        width: 100%;
         font-size: 20px;
         letter-spacing: 0px;
     }
@@ -807,7 +1008,7 @@ section{
         min-width: 110px;
         height: 300px;
         top: -100%;
-        right: 0vw;
+        right: -10vw;
     }
 }
 
@@ -851,9 +1052,7 @@ section{
         opacity: 0;
         overflow-x: hidden;
 
-    }
-    
-    
+    }    
 
     .active:not(.lineaDivision){
         transition: opacity 0.5s ease;
@@ -955,7 +1154,7 @@ section{
 
     .primerPlato img{
         width: 600px;
-        height: 420px;
+        height: auto;
     }
 
     .mesaOscura{
@@ -1005,7 +1204,7 @@ section{
         width: 450px;
         height: 250px;
         top: -50%;
-        left: -22vw;
+        left: -32vw;
         overflow: visible;
     }
 
@@ -1078,12 +1277,14 @@ section{
     .contenedorContexto{
         position: relative;
         top: 15vh;
+        align-items: center;
     }
 
     .textosContexto{
         top: 30%;
         text-align: start;
-        left: 10vw;
+        margin: 0;
+        padding: 0;
     }
 
     .textosContexto h2{
@@ -1102,7 +1303,7 @@ section{
         width: 500px;
         height: 300px;
         top: -100%;
-        right: -10vw;
+        right: -25vw;
     }
 
 }
