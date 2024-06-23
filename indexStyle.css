@@ -23,6 +23,7 @@ body{
 
 .fondoCarga{
     background-image: url(./media/chalkboard.jpg);
+    background-size: cover;
 }
 
 .ilustracionCarga{
@@ -1308,5 +1309,58 @@ section{
 
 }
 
+@media screen and (min-width: 1400px){
+    .primerPlato{
+        width: 1100px;
+        height: 850px;
+        top: 87vh;
+        left: 61vw;
+    }    
+
+    .contenedorTextos h2{
+        font-size: 110px;
+        line-height: 79px;
+    }
+
+    .contenedorTextos p{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .textosMesaOscura h2{
+        font-size: 90px;
+    }
+
+    .textosMesaOscura p{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .ilustracionBlanca{
+        left: -22vw;
+    }
+
+    .ilustracionBlancaSegunda{
+        right: -12vw;
+    }
+
+    .textosClaroSegundo h2{
+        font-size: 90px;
+    }
+
+    .textosClaroSegundo p{
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .textosContexto h2{
+        font-size: 90px;
+    }
+
+    .textosContexto p{
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
 
 
