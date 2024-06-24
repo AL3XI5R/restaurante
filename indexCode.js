@@ -14,7 +14,10 @@ const contenidoPagina = document.querySelector(".contenidoCompleto")
 let progreso = 10;
 const body = document.querySelector("body")
 
-
+/* Al cargar la página se guarda la posicion de las imagenes; 
+Al hacer resize se vuelve a guardar;
+Cuando la imagen no está en el viewport vuelve a esa posicion;
+ */
 
 document.addEventListener("DOMContentLoaded", () => {
   
